@@ -1,5 +1,5 @@
 include LICENSE
-include README.rst
+include README.md
 recursive-include docs *
 recursive-include django_haveli_admin/static *
 recursive-include django_haveli_admin/templates *
