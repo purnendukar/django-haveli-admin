@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto","Lucida Grande","DejaVu Sans","Bitstream Vera Sans",Verdana,Arial,sans-serif;
+}
+
+/* LOGIN FORM */
+
+.login {
+    background: #fafbff;
+    height: auto;
+}
+
+.login #header {
+    height: auto;
+    padding: 15px 16px;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 10px 40px;
+    background: #273351;
+    color: #ffc;
+    overflow: hidden;
+}
+
+.login #header h1 {
+    font-size: 18px;
+}
+
+.login #header h1 a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login #content {
+    padding: 15px 20px 3px;
+}
+
+.login #container {
+    background: #fff;
+    border: 1px solid #273351;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 26em;
+    min-width: 300px;
+    margin: 100px auto;
+    height: auto;
+}
+
+.login .form-row {
+    padding: 2px 0;
+}
+
+.login .form-row label {
+    display: none;
+    line-height: 1em;
+}
+
+.login .form-row input {
+    display: block;
+    line-height: 1em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom-color: #273351;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.login .form-row #id_username, .login .form-row #id_password {
+    padding: 10px 20px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+.login .submit-row {
+    padding: 1.5em 0 0 0;
+    margin: 0;
+    text-align: center;
+}
+
+.login .submit-row input{
+    font-size: 13px;
+    color: white;
+    background-color: #273351;
+}
+
+.login .submit-row input:hover{
+    cursor: pointer;
+}
+
+.login .password-reset-link {
+    text-align: center;
+    margin-top: 20px;
+}
+.password-reset-link a{
+    font-size: 12px;
+    color: #3e4e75;
+}
+
+

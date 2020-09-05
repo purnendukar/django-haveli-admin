@@ -1,0 +1,10 @@
+{% load i18n %}
+
+<!-- <button class="sticky toggle-nav-sidebar" id="toggle-nav-sidebar" aria-label="{% trans 'Toggle navigation' %}"></button> -->
+<nav class="sticky" id="nav-sidebar">
+  <div class="nav_branding">
+    <span id="nav_back" class="left arrow_left"></span>
+    <span class="left">{{ site_header|default:_('Django Haveli') }}</span>
+  </div>
+  {% include 'admin/sidebar_list.html' with app_list=available_apps show_changelinks=False %}
+</nav>

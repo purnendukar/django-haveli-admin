@@ -1,0 +1,26 @@
+{% load i18n %}
+
+{% if app_list %}
+    <div class="menu_container">
+    {% for app in app_list %}
+        <div class="app-{{ app.app_label }} nav_app {% if app.app_url in request.path %} current-app{% endif %}">
+            <span class="nav_app_title">
+                <a {# href="{{ app.app_url }}" #} class="nav_drop_down" title="{% blocktrans with name=app.name %}Models in the {{ name }} application{% endblocktrans %}">{{ app.name }}</a>
+            </span>
+            <div class="nav_models collapse">
+                {% for model in app.models %}
+                <span class="nav_model">
+                    {% if model.admin_url %}
+                        <a href="{{ model.admin_url }}"{% if model.admin_url in request.path %} aria-current="page"{% endif %}>{{ model.name }}</a>
+                    {% else %}
+                        <a>{{ model.name }}</a>
+                    {% endif %}
+                </span>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+{% else %}
+  <p>{% trans 'You don’t have permission to view or edit anything.' %}</p>
+{% endif %}

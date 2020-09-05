@@ -1,0 +1,119 @@
+{% load i18n static %}<!DOCTYPE html>
+{% load admin_urls static admin_list %}
+{% get_current_language as LANGUAGE_CODE %}{% get_current_language_bidi as LANGUAGE_BIDI %}
+<html lang="{{ LANGUAGE_CODE|default:'en-us' }}" {% if LANGUAGE_BIDI %}dir='rtl'{% endif %}>
+<head>
+<!--    <meta charset="UTF-8">-->
+    <title>{% block title %}{% endblock %}</title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="{% static '/admin/js/vendor/jquery/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static '/admin/js/haveli.init.js' %}"></script>
+
+    {% block extrastyle %}
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/css/base.css' %}" />
+      <link rel="stylesheet" type="text/css" href="{% static 'admin/css/common.css' %}" />
+    {% endblock %}
+    {% block extrahead %}
+    {% endblock %}
+
+
+    {{ media.js }}
+
+    {% if LANGUAGE_BIDI %}
+      {# PUT HERE YOUR CUSTOM RTL STYLESHEET #}
+      {% comment %}
+      <!-- <link rel="stylesheet" type="text/css" href="{% block stylesheet_rtl %}{% static 'admin/css/rtl.css' %}{% endblock %}" /> -->
+      {% endcomment %}
+    {% endif %}
+</head>
+<body class="{% if is_popup %}popup {% endif %} {% block bodyclass %}{% endblock %}" data-admin-utc-offset="{% now 'Z' %}">
+  <!-- Container -->
+  <div id="container">
+    {% if not is_popup %}
+      {% if not is_popup and is_nav_sidebar_enabled %}
+        {% block nav-sidebar %}
+          {% include "admin/nav_sidebar.html" %}
+        {% endblock %}
+      {% endif %}
+      <!-- Header -->
+      <div id="header">
+        <div id="menu_brand">
+          <div id="nav-menu" class="left">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div id="branding">
+            {% block branding %}{% endblock %}
+          </div>
+        </div>
+        {% block usertools %}
+          {% if has_permission %}
+            <div id="user-tools">
+              {% block welcome-msg %}
+                {% trans 'Welcome,' %}
+                <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+              {% endblock %}
+              {% block userlinks %}
+                {% if site_url %}
+                  <a href="{{ site_url }}">{% trans 'View site' %}</a> /
+                {% endif %}
+                {% if user.is_active and user.is_staff %}
+                  {% url 'django-admindocs-docroot' as docsroot %}
+                  {% if docsroot %}
+                      <a href="{{ docsroot }}">{% trans 'Documentation' %}</a> /
+                  {% endif %}
+                {% endif %}
+                {% if user.has_usable_password %}
+                  <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
+                {% endif %}
+                  <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+              {% endblock %}
+            </div>
+          {% endif %}
+        {% endblock %}
+        {% block nav-global %}{% endblock %}
+      </div>
+      <!-- END Header -->
+      {% block breadcrumbs %}
+        <div class="breadcrumbs">
+          <a href="{% url 'admin:index' %}">{% trans 'Home' %}</a>
+          {% if title %} &rsaquo; {{ title }}{% endif %}
+        </div>
+      {% endblock %}
+    {% endif %}
+
+    <div class="main shifted" id="main">
+      <div class="content">
+        {% block messages %}
+          {% if messages %}
+            <ul class="messagelist">{% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message|capfirst }}</li>
+            {% endfor %}</ul>
+          {% endif %}
+        {% endblock messages %}
+        <!-- Content -->
+        <div id="content" class="{% block coltype %}colM{% endblock %}">
+          {% block pretitle %}{% endblock %}
+          {% block content_title %}{% if title %}<h1>{{ title }}</h1>{% endif %}{% endblock %}
+          {% block content %}
+            {% block object-tools %}{% endblock %}
+            {{ content }}
+          {% endblock %}
+          <br class="clear">
+        </div>
+        <!-- END Content -->
+        {% block footer %}<div id="footer"></div>{% endblock %}
+      </div>
+    </div>
+  </div>
+  <!-- END Container -->
+
+  {% block extrajs %}
+    <script src="{% static 'admin/js/haveli_sidebar.js' %}"></script>
+  {% endblock %}
+
+</body>
+</html>
