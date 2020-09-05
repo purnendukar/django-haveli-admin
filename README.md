@@ -23,7 +23,7 @@ Django Suit is alternative for [Django](http://www.djangoproject.com) administra
 
 **project/settings.py**
 
-Always place the above django's default admin package (django.contrib.admin).
+Always place the above django's default admin package (django.contrib.admin). So that it could override the existin django theme.
 
 ```
 INSTALLED_APPS = [
@@ -32,11 +32,6 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     ...
 ]
-```
-
-After adding the package run the following command so that static file of the package can be used.
-```
-python manage.py collectstatic
 ```
 
 
