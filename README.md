@@ -13,3 +13,8 @@ Django Suit is alternative for [Django](http://www.djangoproject.com) administra
 # Docs & Support
 
 * Documentation: https://django-haveli-admin.readthedocs.io/en/latest/
+
+
+# Requirement
+
+* Django: 2.1 or above
