@@ -19,6 +19,28 @@ Django Suit is alternative for [Django](http://www.djangoproject.com) administra
 
 * Django: 2.1 or above
 
+# Usage
+
+**project/settings.py**
+
+Always place the above django's default admin package (django.contrib.admin).
+
+```
+INSTALLED_APPS = [
+
+    'django_haveli_admin',
+    'django.contrib.admin',
+    ...
+]
+```
+
+After adding the package run the following command so that static file of the package can be used.
+```
+python manage.py collectstatic
+```
+
+
+
 # Sample
 
 **Django Haveli Admin: Login**
