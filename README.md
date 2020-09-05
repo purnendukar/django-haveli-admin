@@ -21,14 +21,20 @@ Django Suit is alternative for [Django](http://www.djangoproject.com) administra
 
 # Sample
 
-**Django Haveli Admin: Login***
+**Django Haveli Admin: Login**
 ![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_login.png?raw=true)
 
-**Django Haveli Admin: Dashboard***
+**Django Haveli Admin: Dashboard**
 ![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_dashboard.png?raw=true)
 
-**Django Haveli Admin: Nav-Sidebar***
+**Django Haveli Admin: Nav Sidebar**
 ![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_sidebar.png?raw=true)
+
+**Django Haveli Admin: Filters**
+![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_filters.png?raw=true)
+
+**Django Haveli Admin: Change Form**
+![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_changeform.png?raw=true)
 
 
 
