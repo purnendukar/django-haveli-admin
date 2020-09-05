@@ -3,11 +3,11 @@
 
 **Improved theme for Django admin Interface**.
 
-Django Suit is alternative for [Django](http://www.djangoproject.com) administration interface.
+Django Haveli Admin is alternative for [Django](http://www.djangoproject.com) administration interface.
 
 # License
 
-* Django Suit is licensed under BSD-3-Clause license.
+* Django Haveli Admin is licensed under BSD-3-Clause license.
 
 
 # Docs & Support
