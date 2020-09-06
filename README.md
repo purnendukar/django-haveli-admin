@@ -1,5 +1,6 @@
 # Django Haveli Admin
 
+[![Downloads](https://pepy.tech/badge/django-haveli-admin)](https://pepy.tech/project/django-haveli-admin)
 
 **Improved theme for Django admin Interface**.
 
