@@ -3,7 +3,7 @@
 
 **Improved theme for Django admin Interface**.
 
-Django Haveli Admin is alternative for [Django](http://www.djangoproject.com) administration interface.
+Django Haveli Admin is alternative Theme for [Django](http://www.djangoproject.com) administration interface.
 
 # License
 
