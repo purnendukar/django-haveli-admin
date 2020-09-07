@@ -3,6 +3,12 @@
 
 {% if app_list %}
     <div class="menu_container">
+        <div class="app-home nav_app ">
+            <span class="nav_app_title">
+                <img src="{% static 'images/home.png' %}" />
+                <a href="/admin" class="nav_drop_down" title="{% blocktrans with name='Home' %}{{name}}{% endblocktrans %}">Home</a>
+            </span>
+        </div>
     {% for app in app_list %}
         <div class="app-{{ app.app_label }} nav_app {% if app.app_url in request.path %} current-app{% endif %}">
             <span class="nav_app_title">
