@@ -5,7 +5,9 @@
     <div class="menu_container">
         <div class="app-home nav_app ">
             <span class="nav_app_title">
+                {% if app_list.0.show_icon %}
                 <img src="{% static 'images/home.png' %}" />
+                {% endif %}
                 <a href="/admin" class="nav_drop_down" title="{% blocktrans with name='Home' %}{{name}}{% endblocktrans %}">Home</a>
             </span>
         </div>
