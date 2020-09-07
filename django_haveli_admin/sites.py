@@ -80,12 +80,11 @@ class HaveliAdminSite(AdminSite):
                 app_dict[app_label]['models'].append(model_dict)
             else:
                 app = apps.get_app_config(app_label)
-                print(app.verbose_name,getattr(app,'icon',''))
                 app_dict[app_label] = {
                     'name': app.verbose_name,
                     'app_label': app_label,
                     'app_icon': getattr(app,'icon',''),
-                    'show_icon': getattr(settings,'SHOW_APP_ICON',False),
+                    'show_icon': getattr(settings,'SHOW_NAV_APP_ICON',False),
                     'app_url': reverse(
                         'admin:app_list',
                         kwargs={'app_label': app_label},

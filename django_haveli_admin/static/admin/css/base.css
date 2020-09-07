@@ -802,7 +802,8 @@ table#change-history tbody th {
 
 #header {
     width: auto;
-    height: auto;
+    /* height: auto; */
+    height: 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -812,6 +813,40 @@ table#change-history tbody th {
     overflow: hidden;
 }
 
+.user_drop_down:after{
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid white;
+    border-right: 2px solid white;
+    border-radius: 2px;
+}
+
+#header .user_menu {
+    background-color: #273351;
+    display: grid;
+    width: max-content;
+    position: absolute;
+    right: 40px;
+    top:55px;
+    z-index: 10;
+    padding:10px 0;
+    overflow: hidden;
+    transition-duration: 0.25s;
+}
+#header .user_menu.collapse{
+    height: 0;
+    padding: 0;
+}
+
+#header .user_menu a{
+    color:white;
+    /* width: 100%; */
+    padding: 10px 30px;
+}
+#header .user_menu a:hover{
+    text-decoration: none;
+    color: #c1cae0;
+}
 #header a:link, #header a:visited {
     color: #fff;
 }
@@ -998,6 +1033,7 @@ table#change-history tbody th {
 .nav_models .nav_model a{
     color: #dce5ff;
     font-size: 14px;
+    margin-left: 28px;
 }
 #nav-sidebar .nav_models span.nav_model{
     margin: 5px 0;
@@ -1027,6 +1063,18 @@ table#change-history tbody th {
 #nav-sidebar span{
     display: block;
     padding: 5px 15px;
+}
+
+#nav-sidebar .nav_app_title{
+    display: flex;
+}
+#nav-sidebar .nav_app_title a{
+    width: 100%;
+}
+#nav-sidebar .nav_app_title img{
+    width: 18px;
+    object-fit: contain;
+    margin-right: 10px;
 }
 
 #nav-sidebar .nav_app{

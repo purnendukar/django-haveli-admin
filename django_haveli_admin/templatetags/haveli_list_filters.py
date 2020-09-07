@@ -38,8 +38,6 @@ def haveli_list_filter_select(cl, spec):
             elif key.startswith(field_key + '__') or '__' + field_key + '__' in key:
                 value = query_parts[key][0]
                 matched_key = key
-            
-            print('key',key)
 
             if value:
                 matches[matched_key] = value
