@@ -5,7 +5,7 @@
 
 {% block branding %}
 {% if show_brand_image %}
-<img src="{% static 'images/branding.png' %}" alt="" >
+<img src="{% static brand_image %}" alt="" >
 {% else %}
 <h1 id="site-name" class="left"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django Haveli') }}{{show_brand_image}}</a></h1>
 {% endif %}
