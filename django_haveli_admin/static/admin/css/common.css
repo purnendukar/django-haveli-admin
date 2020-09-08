@@ -65,3 +65,7 @@
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
 }
+
+#branding img {
+    height: 52px;
+}

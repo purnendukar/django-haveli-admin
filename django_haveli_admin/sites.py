@@ -1,12 +1,17 @@
 from django.contrib.admin.sites  import AdminSite
 from django.utils.text import capfirst
 from django.apps import apps
+from django.conf import settings
 
 from .utils import *
 
 class HaveliAdminSite(AdminSite):
 
     enable_nav_sidebar = True
+    show_brand_image = getattr(settings,"SHOW_BRAND_IMAGE",False)
+    brand_image = getattr(settings,"BRAND_IMAGE","")
+    assert (type(show_brand_image)==bool), "SHOW_BRAND_IMAGE should be boolean"
+    assert (type(brand_image)==str), "BRAND_IMAGE should be String"
 
     def each_context(self, request):
         """
@@ -23,6 +28,8 @@ class HaveliAdminSite(AdminSite):
             'site_url': site_url,
             'has_permission': self.has_permission(request),
             'available_apps': self.get_app_list(request),
+            'show_brand_image': self.show_brand_image,
+            'brand_image': self.brand_image,
             'is_popup': False,
             'is_nav_sidebar_enabled': self.enable_nav_sidebar,
         }

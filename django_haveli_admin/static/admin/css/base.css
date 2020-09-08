@@ -821,6 +821,11 @@ table#change-history tbody th {
     border-radius: 2px;
 }
 
+#menu_brand {
+    display: flex;
+    align-items: center;
+}
+
 #header .user_menu {
     background-color: #273351;
     display: grid;
@@ -1102,5 +1107,4 @@ table#change-history tbody th {
     padding: 10px 0;
     overflow: scroll;
 }
-
 
