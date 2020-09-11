@@ -37,6 +37,14 @@ INSTALLED_APPS = [
 ]
 ```
 
+# What's New 
+
+* sidebar menu whole tab clickable
+* Can add icon in AppConfig for sidebar
+* Can add Brand Image 
+* User menu dropdown
+* Added Home button in sidebar
+
 
 
 # Sample
