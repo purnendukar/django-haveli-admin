@@ -45,10 +45,10 @@ INSTALLED_APPS = [
 ![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_login.png?raw=true)
 
 **Django Haveli Admin: Dashboard**
-![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_dashboard.png?raw=true)
+![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_branding.png?raw=true)
 
-**Django Haveli Admin: Nav Sidebar**
-![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_sidebar.png?raw=true)
+**Django Haveli Admin: Nav Sidebar and Dropdown**
+![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_navicon_dropdown.png?raw=true)
 
 **Django Haveli Admin: Filters**
 ![alt text](https://github.com/purnendukar/django-haveli-admin/blob/master/django_haveli_admin-sample/django_haveli_filters.png?raw=true)
