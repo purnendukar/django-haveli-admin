@@ -6,6 +6,17 @@
 Welcome to django-haveli-admin's documentation!
 ===============================================
 
+If you wanted to improve the django default theme to make the admin panel better
+then you can use `django-haveli-admin
+<https://pypi.org/project/django-haveli-admin/>`_
+in your project.
+
+++++++++++++
+Requirements
+++++++++++++
+
+* Django: 2.1 or above
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -16,9 +27,16 @@ Welcome to django-haveli-admin's documentation!
 
 
 
-Indices and tables
-==================
+.. Indices and tables
+.. ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
+
+Links
+=============
+* Django doc: https://docs.djangoproject.com/en/3.1/
+* Package: https://pypi.org/project/django-haveli-admin/
+
+
