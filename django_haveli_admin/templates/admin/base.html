@@ -54,8 +54,10 @@
             <div id="user-tools">
               {% block welcome-msg %}
                 {% trans 'Welcome,' %}
-                <strong>{% firstof user.get_short_name user.get_username %}</strong>.
+                <strong>{% firstof user.get_short_name user.get_username %}</strong>
+                <span class="arrow_down user_drop_down"></span>
               {% endblock %}
+              {% comment %}
               {% block userlinks %}
                 {% if site_url %}
                   <a href="{{ site_url }}">{% trans 'View site' %}</a> /
@@ -70,6 +72,12 @@
                   <a href="{% url 'admin:password_change' %}">{% trans 'Change password' %}</a> /
                 {% endif %}
                   <a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a>
+              {% endblock %}
+              {% endcomment %}
+            </div>
+            <div class="user_menu collapse">
+              {% block userlinks %}
+                {% include 'admin/user_drop_down.html' %}
               {% endblock %}
             </div>
           {% endif %}
@@ -113,6 +121,7 @@
 
   {% block extrajs %}
     <script src="{% static 'admin/js/haveli_sidebar.js' %}"></script>
+    <script src="{% static 'admin/js/user_menu.js' %}"></script>
   {% endblock %}
 
 </body>

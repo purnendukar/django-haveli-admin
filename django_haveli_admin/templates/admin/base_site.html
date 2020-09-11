@@ -1,9 +1,14 @@
 {% extends "admin/base.html" %}
+{% load static %}
 
 {% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
 
 {% block branding %}
-<h1 id="site-name" class="left"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django Haveli') }}</a></h1>
+{% if show_brand_image %}
+<a href="{% url 'admin:index' %}"><img src="{% static brand_image %}" alt="" /></a>
+{% else %}
+<h1 id="site-name" class="left"><a href="{% url 'admin:index' %}">{{ site_header|default:_('Django Haveli') }}{{show_brand_image}}</a></h1>
+{% endif %}
 {% endblock %}
 
 {% block nav-global %}
