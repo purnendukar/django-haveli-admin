@@ -2,3 +2,7 @@
 *.tar.gz
 *.whl
 *.txt
+docs/_build/*
+docs/make.bat
+docs/Makefile
+docs/conf.py
