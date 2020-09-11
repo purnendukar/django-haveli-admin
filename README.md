@@ -13,10 +13,11 @@ Django Haveli Admin is alternative Theme for [Django](http://www.djangoproject.c
 * Django Haveli Admin is licensed under BSD-3-Clause license.
 
 
-# Docs & Support
+# Docs & Package
 
 * Documentation: https://django-haveli-admin.readthedocs.io/en/latest/
 
+* Package: https://pypi.org/project/django-haveli-admin/
 
 # Requirement
 
