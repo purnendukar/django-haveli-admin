@@ -3,6 +3,8 @@
 ![PyPI](https://img.shields.io/pypi/v/django-haveli-admin)
 ![GitHub](https://img.shields.io/github/license/purnendukar/django-haveli-admin)
 [![Downloads](https://pepy.tech/badge/django-haveli-admin)](https://pepy.tech/project/django-haveli-admin)
+[![Documentation Status](https://readthedocs.org/projects/django-haveli-admin/badge/?version=latest)](https://django-haveli-admin.readthedocs.io/en/latest/?badge=latest)
+      
 
 **Improved theme for Django admin Interface**.
 
