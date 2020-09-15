@@ -728,7 +728,7 @@ table#change-history tbody th {
 #container {
     position: relative;
     width: 100%;
-    min-width: 980px;
+    /* min-width: 980px; */
     padding: 0;
     display: flex;
     flex-direction: column;

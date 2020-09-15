@@ -1,0 +1,107 @@
+@media only screen and (max-width:600px){
+
+    body{
+        font-size: 13px;
+    }
+    
+    /* [class = ".dashboard #content"]{
+        width: auto;
+    } */
+    .dashboard #content{
+        width: auto;
+    }
+    .colMS{
+        margin-right: auto;
+    }
+    #header{
+        padding:10px 10px;
+        height: 25px;
+    }
+    #branding img{
+        height: 45px;
+    }
+    #nav-menu div{
+        width: 20px;
+        margin: 4px 0;
+    }
+    #content{
+        padding: 20px;
+    }
+    #header .user_menu{
+        top: 50px;
+        right: 10px;
+    }
+    #header .user_menu a{
+        padding: 8px 20px;
+    }
+    /* #user-tools {
+        font-size: 10px;
+    } */
+    .nav_app span a{
+        font-size: 13px;
+    }
+    #nav-sidebar .nav_branding span{
+        font-size: 15px;
+    }
+    #nav-sidebar .nav_branding{
+        padding-bottom: 40px;
+    }
+    h1{
+        font-size: 18px;
+    }
+    #user-tools{
+        font-size: 10px;
+    }
+    #changelist #toolbar form #searchbar{
+        width: 85%;
+        max-width: none;
+    }
+    .search-filters select{
+        max-width: none;
+        width: 100%;
+    }
+    .search-filters{
+        padding: 15px 0 0 0;
+        display: block;
+    }
+    #changelist-search input[type="submit"]{
+        width:100%;
+        margin-top:10px;
+    }
+    #changelist #toolbar form input[type="submit"]{
+        margin-top:10px;
+    }
+    #container > .main{
+        overflow: scroll;
+    }
+    .change-form .main > .content{
+        max-width: none;
+    }
+    /* #content {
+        min-width: 600px;
+    } */
+    .submit-row input{
+        margin: 5px 0;
+        width: 100%;
+    }
+    .submit-row input.default{
+        margin: 5px 0;
+    }
+    .submit-row p.deletelink-box{
+        width: 100%;
+        text-align: center;
+    }
+    .form-row input{
+        width: 95%;
+    }
+    .form-row label{
+        width: 95%;
+    }
+    #content-main .form-row div.help{
+        width: 95%;
+        margin-left:0;
+    }
+    .aligned label + p, .aligned label + div.help, .aligned label + div.readonly{
+        margin-left: 0;
+    }
+}
