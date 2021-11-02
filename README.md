@@ -23,7 +23,7 @@ Django Haveli Admin is alternative Theme for [Django](http://www.djangoproject.c
 
 # Requirement
 
-* Django: 2.1 or above
+* Django: 2
 
 # Usage
 
